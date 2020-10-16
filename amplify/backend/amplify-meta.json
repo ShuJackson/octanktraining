@@ -22,7 +22,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-vodaws-prod-124117-deployment/amplify-cfn-templates/auth/vodawsab4d959c-cloudformation-template.yml",
         "logicalId": "authvodawsab4d959c"
       },
-      "lastPushTimeStamp": "2020-10-10T23:21:28.606Z",
+      "lastPushTimeStamp": "2020-10-15T21:38:23.503Z",
       "output": {
         "AppClientSecret": "t1av9sgrrn5u14s5ep011o93fjpbukaiobhh8dm5dmre236l53g",
         "UserPoolId": "us-east-1_bsaQMv0aV",
@@ -32,7 +32,7 @@
         "IdentityPoolName": "vodawsab4d959c_identitypool_ab4d959c__prod",
         "UserPoolName": "vodawsab4d959c_userpool_ab4d959c"
       },
-      "lastPushDirHash": "/Q/2o3KztGYrUxceizcoKWQFajE="
+      "lastPushDirHash": "tDvnKTwJ6lHDHWHh99AZNmtmsi8="
     }
   },
   "api": {
@@ -56,8 +56,8 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-vodaws-prod-124117-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apivodsecure"
       },
-      "lastPushTimeStamp": "2020-10-10T23:21:28.613Z",
-      "lastPushDirHash": "h0NESqrnKETgHiv9Aztv+amZrss="
+      "lastPushTimeStamp": "2020-10-15T21:38:23.503Z",
+      "lastPushDirHash": "wavMRkKFq8oj/gtd+SsqyPwE884="
     }
   },
   "hosting": {
@@ -68,7 +68,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-vodaws-prod-124117-deployment/amplify-cfn-templates/hosting/template.json",
         "logicalId": "hostingS3AndCloudFront"
       },
-      "lastPushTimeStamp": "2020-10-10T23:21:28.622Z",
+      "lastPushTimeStamp": "2020-10-15T21:38:23.497Z",
       "output": {
         "CloudFrontSecureURL": "https://dbavvzs66ssnu.cloudfront.net",
         "S3BucketSecureURL": "https://odws-20201010191626-hostingbucket-prod.s3.amazonaws.com",
@@ -80,6 +80,23 @@
         "CloudFrontDomainName": "dbavvzs66ssnu.cloudfront.net"
       },
       "lastPushDirHash": "mq0eaet9k6IIdHOngl75ItqoNu8="
+    }
+  },
+  "analytics": {
+    "octanktraining": {
+      "service": "Pinpoint",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-vodaws-prod-124117-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
+        "logicalId": "analyticsoctanktraining"
+      },
+      "lastPushTimeStamp": "2020-10-15T21:38:23.503Z",
+      "output": {
+        "appName": "octanktraining-prod",
+        "Region": "us-east-1",
+        "Id": "73958c5a3fcf489485bfce2330100fa8"
+      },
+      "lastPushDirHash": "3pvePkziND0mpowF4ZkItP2+Ewk="
     }
   }
 }

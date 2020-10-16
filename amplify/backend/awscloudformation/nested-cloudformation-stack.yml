@@ -74,7 +74,7 @@
 				"TemplateURL": "https://s3.amazonaws.com/amplify-vodaws-prod-124117-deployment/amplify-cfn-templates/auth/vodawsab4d959c-cloudformation-template.yml",
 				"Parameters": {
 					"identityPoolName": "vodawsab4d959c_identitypool_ab4d959c",
-					"allowUnauthenticatedIdentities": false,
+					"allowUnauthenticatedIdentities": true,
 					"resourceNameTruncated": "vodawsab4d959c",
 					"userPoolName": "vodawsab4d959c_userpool_ab4d959c",
 					"autoVerifiedAttributes": "email",
@@ -144,6 +144,34 @@
 				"TemplateURL": "https://s3.amazonaws.com/amplify-vodaws-prod-124117-deployment/amplify-cfn-templates/hosting/template.json",
 				"Parameters": {
 					"bucketName": "odws-20201010191626-hostingbucket",
+					"env": "prod"
+				}
+			}
+		},
+		"analyticsoctanktraining": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/amplify-vodaws-prod-124117-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
+				"Parameters": {
+					"appName": "octanktraining",
+					"roleName": "pinpointLambdaRole617a952b",
+					"cloudformationPolicyName": "cloudformationPolicy617a952b",
+					"cloudWatchPolicyName": "cloudWatchPolicy617a952b",
+					"pinpointPolicyName": "pinpointPolicy617a952b",
+					"authPolicyName": "pinpoint_amplify_617a952b",
+					"unauthPolicyName": "pinpoint_amplify_617a952b",
+					"authRoleName": {
+						"Ref": "AuthRoleName"
+					},
+					"unauthRoleName": {
+						"Ref": "UnauthRoleName"
+					},
+					"authRoleArn": {
+						"Fn::GetAtt": [
+							"AuthRole",
+							"Arn"
+						]
+					},
 					"env": "prod"
 				}
 			}

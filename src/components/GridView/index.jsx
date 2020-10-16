@@ -9,7 +9,7 @@ import GridCardView from '../GridCardView';
 import 'video.js/dist/video-js.css';
 
 // Insert Location 9
-import Amplify, { API, graphqlOperation } from 'aws-amplify';
+import Amplify, { API, graphqlOperation, Analytics } from 'aws-amplify';
 import * as queries from '../../graphql/queries';
 
 
@@ -55,17 +55,20 @@ this.listenForNewAssets();
   }
 
   displayMovie = (item) => {
-    // Insert Location 13
-const region = Amplify._config.aws_project_region;
-this.setState({
-  sources: [{
-      src: `https://${awsvideo.awsOutputVideo}/${item.video.id}.m3u8`,
-      type: 'application/x-mpegURL',
-    }],
-  displayingMovie: true,
-  choosenItem: item,
-  token: item.video.token,
-});
+    Analytics.record({
+      name: 'movieClick', 
+      attributes: { id: item.video.id, title: item.video.title }
+    });
+    const region = Amplify._config.aws_project_region;
+    this.setState({
+      sources: [{
+          src: `https://${awsvideo.awsOutputVideo}/${item.video.id}.m3u8`,
+          type: 'application/x-mpegURL',
+        }],
+      displayingMovie: true,
+      choosenItem: item,
+      token: item.video.token,
+    });
   }
 
  overlayMovie = () => {

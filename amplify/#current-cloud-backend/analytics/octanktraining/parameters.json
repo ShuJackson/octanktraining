@@ -1,0 +1,21 @@
+{
+    "appName": "octanktraining",
+    "roleName": "pinpointLambdaRole617a952b",
+    "cloudformationPolicyName": "cloudformationPolicy617a952b",
+    "cloudWatchPolicyName": "cloudWatchPolicy617a952b",
+    "pinpointPolicyName": "pinpointPolicy617a952b",
+    "authPolicyName": "pinpoint_amplify_617a952b",
+    "unauthPolicyName": "pinpoint_amplify_617a952b",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

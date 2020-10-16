@@ -13,7 +13,9 @@ const awsmobile = {
     "aws_appsync_authenticationType": "AMAZON_COGNITO_USER_POOLS",
     "aws_content_delivery_bucket": "odws-20201010191626-hostingbucket-prod",
     "aws_content_delivery_bucket_region": "us-east-1",
-    "aws_content_delivery_url": "https://dbavvzs66ssnu.cloudfront.net"
+    "aws_content_delivery_url": "https://dbavvzs66ssnu.cloudfront.net",
+    "aws_mobile_analytics_app_id": "73958c5a3fcf489485bfce2330100fa8",
+    "aws_mobile_analytics_app_region": "us-east-1"
 };
 
 
